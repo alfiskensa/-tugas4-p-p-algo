@@ -8,7 +8,7 @@ public class Soal2 extends AbstractSoal {
 	public void answer() throws Exception {
 		Date startDate = sdf.parse("2022-03-05 08:00:00");
 		long timeMillisA = startDate.getTime();
-		long timeMillisB = timeMillisA+(60*1000);
+		long timeMillisB = timeMillisA+(10*1000);
 		boolean isAComplete = false;
 		boolean isBComplete = false;
 		
@@ -25,10 +25,12 @@ public class Soal2 extends AbstractSoal {
 			if(exploredA <= distance) {
 				travelTimeA+= 1000l;
 				
-				if((10*1000) > travelTimeA) {
+				if((1*1000) > travelTimeA) {
 					exploredA+= 2;
-				} else if((20*1000) > travelTimeA) {
+				} else if((2*1000) > travelTimeA) {
 					exploredA+= 2.1;
+				} else if((3*1000) > travelTimeA) {
+					exploredA+= 2.2;
 				} else {
 					exploredA+= 0.1;
 				}
@@ -37,7 +39,7 @@ public class Soal2 extends AbstractSoal {
 				isAComplete = true;
 			}
 			
-			if((travelTimeA > (60*1000)) && (exploredB <= distance)){
+			if((travelTimeA > (10*1000)) && (exploredB <= distance)){
 				travelTimeB+= 1000l;
 				exploredB+= 3;
 				
